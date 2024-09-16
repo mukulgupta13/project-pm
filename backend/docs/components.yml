@@ -1,0 +1,59 @@
+components:
+  responses:
+    error:
+      description: Error occurred.
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Success status of the request.
+          example: false
+        message:
+          type: string
+          description: Error message from the server.
+          example: Error message
+        error:
+          type: array
+          description: List of errors.
+          example: [
+            {
+              "field_name": "Some error message.",
+            }
+          ]
+          items: 
+            type: object
+            properties:
+              errorField:
+                type: string
+                description: Type of error.
+    success:
+      description: Successful response.
+      type: object
+      properties:
+        success:
+          type: boolean
+          description: Success status of the request.
+          example: true
+        message:
+          type: string
+          description: Success message from the server.
+   
+  schemas: 
+    token:
+      description: Token schema.
+      type: object
+      properties:
+        accessToken:
+          type: string
+          description: Access token.
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWY2MDRmZDhmYzllNWIyZTY5YzA2NyIsInBob25lX251bWJlciI6IjExMTExMTExMTEiLCJyb2xlIjoiU3R1ZGVudCIsImlzX2FkbWluIjpmYWxzZSwiaXNfc3Vic2NyaWJlZCI6dHJ1ZSwiaWF0IjoxNjQ4MDE3NjQ4LCJleHAiOjE2NDgwMjEyNDh9.QyCxkKp2typkXy4aZbijNzlGQJ3mc10qk1gXHl9rWR4
+        refreshToken:
+          type: string
+          description: Refresh token.
+          example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWY2MDRmZDhmYzllNWIyZTY5YzA2NyIsInBob25lX251bWJlciI6IjExMTExMTExMTEiLCJyb2xlIjoiU3R1ZGVudCIsImlzX2FkbWluIjpmYWxzZSwiaXNfc3Vic2NyaWJlZCI6dHJ1ZSwiaWF0IjoxNjQ4MDE3NjQ4fQ.ed-3AvrEIGhWfGGBn_SWSOkYciDvUHaJDPrxS7GE-6o
+  
+  securitySchemes:
+    tokenAuth: 
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

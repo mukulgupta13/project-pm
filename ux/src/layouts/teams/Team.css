@@ -1,0 +1,95 @@
+.first {
+    display: flex;
+}
+
+.second {
+    height: 400px;
+    width: 600px;
+
+}
+
+.third {
+    height: 400px;
+    width: 600px;
+    border: solid 1px black;
+}
+
+select {
+    height: 100%;
+    width: 100%;
+    font-size: 15px;
+    border: none;
+    border-bottom: solid 1px #ccc;
+}
+
+.lab1,
+.lab2,
+.lab3 {
+    width: 400px;
+    display: flex;
+}
+
+#form {
+    width: 100%;
+    padding: 4px;
+}
+
+
+#form label {
+    height: 1px;
+}
+
+.form-control label {
+    width: 250px;
+}
+
+.team-details.form-container {
+    padding: 48px;
+}
+
+.assignment-list {
+    display: flex;
+    flex-grow: initial;
+    height: 250px;
+    margin-bottom: 20px;
+}
+
+.assignment-list>div {
+    flex: 1;
+}
+.assignment-list select {
+    height: calc(100% - 25px); 
+}
+.assignment-list .button-area {
+    flex: 0.15;
+    margin-left:15px;
+}
+.buttons-team-details{
+    text-align: right;
+}
+.buttons-team-details button{
+    margin:5px;
+}
+.progress-bar-wrapper{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.progress-bar-wrapper .overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.5);
+    z-index: 1100;
+    display: flex;
+    align-items: center;
+}
+.progress-bar-wrapper .overlay [role=progressbar]{
+    margin:auto;
+}

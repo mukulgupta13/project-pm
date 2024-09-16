@@ -1,0 +1,25 @@
+.MuiPaper-root[role=dialog] {
+    min-width: 30%;
+}
+
+select{
+    border: none; border-bottom: solid 2px #ccc; font-size: 15px; 
+}
+.error-label select {
+    border-bottom-color:#F44335;
+}
+.error-label label,.error-label p {
+    color: #F44335;
+}
+.error-label p {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: 0.03333em;
+    text-align: left;
+    margin-top: 3px;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+}
